@@ -4,8 +4,8 @@
 
 defmodule WorkingWithMultipleProcesses4 do
   def child(parent) do
-    exit(:ouch)
     send(parent, "hi dad")
+    exit(:ouch)
   end
 
   def run() do
